@@ -1,0 +1,95 @@
+body {
+    vertical-align: middle;
+    margin: 0;
+    background-color: #cec6c6;
+}
+
+.form {
+    margin-bottom: 40px;
+}
+
+.form__film-genres {
+    width: 200px;
+    height: 40px;
+}
+
+.form__button {
+    width: 90px;
+    padding: 10px 0;
+    text-align: center;
+    border: 2px solid #15044e;
+    border-radius: 10px;
+    background-color: #6d44f4;
+    color: #fffaf0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1540px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.render {
+    display: flex;
+}
+
+.list {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list__item{
+    width: 30%;
+    border-radius: 10px;
+    margin: 20px 10px;
+    margin-top: 0;
+}
+
+.list__img {
+    width: 100%;
+}
+
+.bookmark-btn {
+    background-color: #2808faf7;
+    color: #fffaf0;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+}
+
+.bookmark-list {
+    width: 25%;
+    margin: 0;
+    padding: 0 30px;
+    border: 1px solid #000;
+}
+
+.bookmark-list__item{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 5px;
+    padding: 10px 20px;
+    background-color: #9f9f9f;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.bookmark-list__btn {
+    background-color: #fa0808f7;
+    color: #fffaf0;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+}
