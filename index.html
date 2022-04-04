@@ -8,16 +8,35 @@
     <title>2-dars</title>
 </head>
 <body>
+    
+
     <form class="form" method="get" autocomplete="off">
-        <select class="form__film-genres"> 
-            <option class="form__option" value="all">All</option>
-        </select>
-        <button type="submit" class="form__button">Submit</button>
+        <div class="container">
+            <div class="form__header">
+                <div class="form__render-genres">
+                    <select class="form__film-genres"> 
+                        <option class="form__option" value="all">All</option>
+                    </select>
+                    <button type="submit" class="form__button">Submit</button>
+                </div>
+                <a class="logo-link" href="./index.html">
+                    <img class="logo-img" src="./images/movie-ticket.png"
+                    width="150"
+                    height="100"
+                    alt="site logo">
+                </a>
+                <div class="search">
+                     <input class="search__input" type="text" placeholder="Search">
+                     <button class="search__btn" type="button">Search</button>
+                </div>
+            </div>
+        </div>
     </form>
+
     <div class="container">
-        
+
         <div class="render">
-            <div class="list row g-4 py-4">
+            <div class="list">
             
             </div>
             <ol class="bookmark-list">
