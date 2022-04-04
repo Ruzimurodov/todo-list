@@ -1,26 +1,9 @@
 body {
     vertical-align: middle;
     margin: 0;
-    background-color: #cec6c6;
-}
-
-.form {
-    margin-bottom: 40px;
-}
-
-.form__film-genres {
-    width: 200px;
-    height: 40px;
-}
-
-.form__button {
-    width: 90px;
-    padding: 10px 0;
-    text-align: center;
-    border: 2px solid #15044e;
-    border-radius: 10px;
-    background-color: #6d44f4;
-    color: #fffaf0;
+    background: #23074d; 
+    background: -webkit-linear-gradient(to right, #23074d, #cc5333); 
+    background: linear-gradient(to right, #23074d, #cc5333); 
 }
 
 .container {
@@ -30,27 +13,123 @@ body {
     padding: 0 20px;
 }
 
+.form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form {
+    padding: 20px 0;
+    background: #C33764;  
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  
+    background: linear-gradient(to right, #1D2671, #C33764); 
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+.form__render-genres {
+    display: inline-block;
+    margin-right: auto;
+}
+
+.form__film-genres {
+    /* width: 200px; */
+    height: 50px;
+    padding: 5px 15px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.form__button, .search__btn {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-weight: bold;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    border: 2px solid #15044e;
+    background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%)
+}
+
+.form__button:hover, .search__btn:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+}
+
+.search {
+    display: inline-block;
+    margin-left: auto;
+}
+
+.search__input {
+    height: 50px;
+    padding: 0 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .render {
     display: flex;
+    padding: 30px 0;
 }
 
 .list {
     width: 75%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
 .list__item{
     width: 30%;
     border-radius: 10px;
-    margin: 20px 10px;
-    margin-top: 0;
+    margin: 0;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    vertical-align: top;
+}
+
+.list__item-inner {
+    border: 1px solid #000;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px,rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    color: #fff;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
 .list__img {
     width: 100%;
+}
+
+.film-title {
+    padding: 0 10px;
+    background: -webkit-linear-gradient(#eee, #999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.film-text {
+    padding: 0 15px;
+    font-weight: 400;
+    font-size: 17px;
 }
 
 .bookmark-btn {
@@ -60,36 +139,90 @@ body {
     font-weight: 500;
     margin: 0 10px;
     padding: 10px 15px;
-    border: none;
+    border: 3px solid transparent;
     border-radius: 10px;
+    background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);    transition: all 1.2s ease;
+}
+
+.bookmark-btn:hover {
+    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+}
+
+.bookmark-btn:active {
+    border: 3px solid #000;
+    box-shadow: 5px 3px 8px #000;
 }
 
 .bookmark-list {
     width: 25%;
     margin: 0;
     padding: 0 30px;
-    border: 1px solid #000;
-}
-
-.bookmark-list__item{
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 15px 5px;
-    padding: 10px 20px;
-    background-color: #9f9f9f;
-    border: 1px solid #000;
+    border: 3px solid #000;
     border-radius: 10px;
-}
-
-.bookmark-list__btn {
-    background-color: #fa0808f7;
-    color: #fffaf0;
-    font-size: 18px;
-    font-weight: 500;
-    margin: 10px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-}
+    background: #334d50;  
+    background: -webkit-linear-gradient(to right, #cbcaa5, #334d50);  
+    background: linear-gradient(to right, #cbcaa5, #334d50); 
+    
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;}
+    
+    .bookmark-list__item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 5px;
+        padding: 5px 20px;
+        background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);    border: 1px solid #000;
+        border-radius: 10px;
+    }
+    
+    .bookmark-list__btn {
+        background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);    color: #fffaf0;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 10px;
+        padding: 5px 15px;
+        border: 3px solid transparent;
+        border-radius: 10px;
+        transition: all 2.2s ease;
+    }
+    
+    .bookmark-list__btn:hover {
+        background-image: linear-gradient(to right,#ec8c69  0%,#ed6ea0  100%);
+    }
+    
+    .bookmark-list__btn:active {
+        border: 3px solid #000;
+        box-shadow: 5px 3px 8px #000;
+    }
+    
+    @media only screen and (max-width: 426px){
+        .form__header {
+            flex-direction: column;
+        }
+        
+        .render {
+            flex-direction: column;
+        }
+        
+        .list {
+            width: 90%;
+            flex-direction: column;
+        }
+        
+        .list__item {
+            width: 100%;
+        }
+        
+        .list__img {
+            width: 100%;
+        }
+        
+        .bookmark-list {
+            width: 90%;
+            max-width: 390px;
+            padding: 0 5px;
+        }
+    }

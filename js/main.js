@@ -3,6 +3,9 @@ const elBookmarkList = document.querySelector(".bookmark-list");
 let elList = document.querySelector(".list");
 let elSelect = document.querySelector(".form__film-genres");
 
+const elSearchInput = document.querySelector(".search__input");
+const elSearchBtn = document.querySelector(".search__btn");
+
 let newBookmark = [];
 
 function renderFilms (arr, element){
@@ -20,8 +23,10 @@ function renderFilms (arr, element){
     
     newImg.setAttribute("src", film.poster);
     newHeading.textContent = film.title;
+    newHeading.setAttribute("class", "film-title")
+    newText.setAttribute("class", "film-text");
     newText.textContent = film.overview.split(" ").slice(0,20).join(" ") + " ...";
-    elBookmark.textContent = "Bookmark";
+    elBookmark.textContent = "Favorite";
     elBookmark.setAttribute("class", "bookmark-btn")
     elBookmark.dataset.dataId = film.id;
     
@@ -90,6 +95,7 @@ function newLists (arr, element){
 
 elList.addEventListener("click", evt=>{
   if(evt.target.matches(".bookmark-btn")){
+
     let btnId = evt.target.dataset.dataId;
     let findBtn = films.find(n=> n.id === btnId)
     if(!newBookmark.includes(findBtn)){
@@ -116,6 +122,24 @@ elBookmarkList.addEventListener("click", evt => {
   
 })
 
+const searchArr = [];
+
+elSearchBtn.addEventListener("click", evt => {
+  evt.preventDefault();
+
+  const searchVal = elSearchInput.value;
+  elSearchInput.value = "";
+
+  films.forEach(m => {
+    if(searchVal == m.title){
+      if(!searchArr.includes(m.title)){
+        searchArr.splice(0,1,m);
+      }
+    }
+  })
+  renderFilms(searchArr,elList)
+})
+
 
 
 elForm.addEventListener("submit", evt =>{
@@ -131,4 +155,5 @@ elForm.addEventListener("submit", evt =>{
 
 renderFilms(films, elList);
 renderGenes(films , elSelect);
+
 
